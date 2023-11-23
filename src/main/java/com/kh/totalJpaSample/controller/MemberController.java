@@ -44,8 +44,8 @@ public class MemberController {
 
     // 페이지네이션 조회
     @GetMapping("/list/page")               // 이름 똑같이 줘서 오버로딩을 일으킴
-    public ResponseEntity<List<MemberDto>>  memberList(@RequestParam(defaultValue = "0") int page,
-                                                       @RequestParam(defaultValue = "10") int size) {
+    public ResponseEntity<List<MemberDto>> memberList(@RequestParam(defaultValue = "0") int page,
+                                                      @RequestParam(defaultValue = "10") int size) {
         List<MemberDto> list = memberService.getMemberList(page, size);
         return ResponseEntity.ok(list);
     }

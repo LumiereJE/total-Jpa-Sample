@@ -20,7 +20,11 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.AUTO)
 //    AUTO : 스프링부트
 //    identity : DB 종속
+    @Column(name = "member_id")
     private Long id;
+
+    private String userId;
+
     @Column(nullable = false)   // NULL을 허용하지 않음
     private String name;
     private String password;
